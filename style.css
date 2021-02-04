@@ -1,5 +1,28 @@
 @charset "utf-8";
 
+/*
+header {
+	background-image: url(work.jpg);
+	background-size: cover;
+}
+*/
+
+section {
+	padding: 15% 0;
+	background-image: url(work.jpg);
+	background-size: cover;
+	height: 100%;
+}
+
+#title-text {
+	padding: 20px;
+	background-color: rgba(255,255,255,0.35);
+/*	color: rebeccapurple;*/
+}
+.lead {
+	padding-bottom: 3px;
+}
+
 .card-body {
 	height: 10rem;
 }
@@ -8,3 +31,6 @@
 	height: 5rem;
 }
 
+.navbar {
+	height: 3rem;
+}
