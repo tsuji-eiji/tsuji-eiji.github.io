@@ -19,8 +19,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 	<meta name="generator" content="Hugo 0.79.0">
-	<title>アルバムサンプル for Bootstrap · Bootstrap v5.0</title>
-
+	<title>Tsuji Eiji Portfolio Site</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
 	<link rel="canonical" href="https://getbootstrap.jp/docs/5.0/examples/album/">
 
 
@@ -62,20 +63,21 @@
 
 	<header>
 		<div class="navbar navbar-dark bg-dark shadow-sm">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 		</div>
 		<section class="title text-center">
-<!--			<div class="row py-lg-5">-->
-				<div id="title-text" class="mx-auto">
-					<h1 class="fw-light">Portfolio</h1>
-					<p class="lead">これまで作成してきた作品たち</p>
-<!--
-					<p>
-						<a href="#" class="btn btn-primary my-2">メインアクション</a>
-						<a href="#" class="btn btn-secondary my-2">サブアクション</a>
-					</p>
--->
-				</div>
-<!--			</div>-->
+			<!--			<div class="row py-lg-5">-->
+			<div id="title-text" class="mx-auto">
+				<h1 class="fw-light">Portfolio</h1>
+				<p class="lead">これまで作成してきた作品たち</p>
+				<!--					<p>-->
+				<!--						<a href="profile.html" class="btn btn-primary">Profile</a>-->
+				<!--						<a href="blog.html" class="btn btn-primary">Blog</a>-->
+				<!--					</p>-->
+			</div>
+			<!--			</div>-->
 		</section>
 	</header>
 
@@ -86,18 +88,22 @@
 				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 					<div class="col">
 						<div class="card shadow-sm">
+							<img src="images/cross_road_studio_.png" alt="">
+							<!--
 							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-								<title>Placeholder</title>
+								<title>Cross Road Studio ~架空の音楽スタジオの店舗ページ~</title>
+								
 								<rect width="100%" height="100%" fill="#55595c" />
 								<text x="50%" y="50%" fill="#eceeef" dy=".3em">Cross Road Studio</text>
 							</svg>
+-->
 
 							<div class="card-body">
 								<p class="card-text">架空の音楽スタジオの店舗ページ</p>
 								<div class="d-flex justify-content-between align-items-center">
 									<div class="btn-group">
 										<button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('cross_road_studio','blank')">Link</button>
-										
+
 									</div>
 								</div>
 							</div>
@@ -105,10 +111,13 @@
 					</div>
 					<div class="col">
 						<div class="card shadow-sm">
+							<img src="images/Quiz_Millionaire.png" alt="">
+							<!--
 							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-								<title>Placeholder</title>
+								<title>Quiz_Millionaire ~JavaScriptで作成したクイズミリオネアのコピーアプリ~</title>
 								<rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Quiz_Millionaire</text>
 							</svg>
+-->
 
 							<div class="card-body">
 								<p class="card-text">JavaScriptで作成したクイズミリオネアのコピーアプリ(全5問・問題は固定)</p>
@@ -121,7 +130,8 @@
 						</div>
 					</div>
 					<div class="col">
-<!--
+
+						<!--
 						<div class="card shadow-sm">
 							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 								<title>Placeholder</title>
