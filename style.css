@@ -20,7 +20,8 @@ section {
 /*	color: rebeccapurple;*/
 }
 .lead {
-	padding-bottom: 3px;
+	font-size: 1.4rem;
+	color: #111;
 }
 
 .card-body {
@@ -33,4 +34,9 @@ section {
 
 .navbar {
 	height: 3rem;
+}
+
+a {
+	text-decoration: none;
+	color: brown;
 }
