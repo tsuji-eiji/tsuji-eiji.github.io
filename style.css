@@ -4,7 +4,7 @@
 	height: 10rem;
 }
 
-/*
-.btn-outline-secondary {
-	margin-bottom: 0;
-}*/
+.card-body p {
+	height: 5rem;
+}
+
