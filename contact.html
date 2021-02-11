@@ -63,26 +63,40 @@
 	<main>
 		<div id="error"></div>
 		<div class="form">
-			<!--			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse">-->
-			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse" onSubmit="return confirm()">
+<!--				<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse">-->
+			<form>
 				<p><label for="name">お名前</label></p>
-				<p><input id="name" name="entry.2005620554" type="text" required></p>
+				<p><input id="name" name="entry.2005620554" type="text"></p>
 				<p><label for="email">メールアドレス</label></p>
-				<p><input type="email" name="entry.469344052" id="email" required></p>
+				<p><input type="email" name="entry.469344052" id="email"></p>
 				<p><label for="subject">件名</label></p>
-				<p><input type="text" name="entry.1166974658" id="subject" required></p>
+				<p><input type="text" name="entry.1166974658" id="subject"></p>
 				<p><label for="message">内容</label></p>
-				<p><textarea id="message" name="entry.839337160" cols="30" rows="10" required></textarea></p>
+				<p><textarea id="message" name="entry.839337160" cols="30" rows="10"></textarea></p>
 				<p><button id="submit">送信</button></p>
 			</form>
 		</div>
 	</main>
-
 	<footer class="text-muted py-3 bg-dark">
 		<div id="copy">
 			<p>(c) 2021 Tsuji Eiji All Rights Resarved.</p>
 		</div>
 	</footer>
+	<script>
+		'use strict';
+		
+		
+		document.getElementById('submit').addEventListener('click',()=>{
+			
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const subject = document.getElementById('subject').value;
+			const message = document.getElementById('message').value;
+			
+			window.alert('hhhh');
+			preventDefault();
+		})
+	</script>
 </body>
 
 </html>
