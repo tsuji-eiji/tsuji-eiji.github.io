@@ -12,13 +12,17 @@ section {
 	height: 100vh;
 }
 
+h1 {
+	font-size: 2rem;
+	margin: 0;
+}
+
 .navbar-toggler {
 	margin-left: auto;
 	margin-right: 1rem;
 }
 
 #page-title {
-	margin-left: 1rem;
 	color: #DEDEDE;
 }
 
@@ -35,7 +39,7 @@ span a {
 
 
 .lead {
-	font-size: 1.4rem;
+	font-size: 1rem;
 	color: #C92828;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	margin: 0 3rem;
@@ -107,5 +111,60 @@ img {
 	margin: auto;
 	text-align: center;
 }
+
+.form {
+	width: 70%;
+	margin: 1rem auto;
+}
+
+
+form p {
+	margin: 0;
+}
+
+label {
+	margin: .5rem 0 0;
+/*	font-size: 1.2rem;*/
+}
+
+input,
+textarea {
+	width: 100%;
+	resize: none;
+}
+
+#submit {
+	height: 3rem;
+	width: 100%;
+	margin: 2rem auto;
+}
+
+/* レスポンシブ対応 */
+/* 最小幅600px以上のデザイン */
+/* メディアクエリ */
+/* ブレイクポイント */
+@media (min-width: 600px) {
+	#page-title {
+		font-size: 1.8rem;
+	}
+	
+	h1 {
+		font-size: 2.8rem;
+	}
+	
+	.lead {
+		font-size: 1.6rem;
+	}
+
+	.form {
+		width: 40%;
+		margin: 2rem auto 2rem 4rem;
+	}
+
+	#submit {
+		height: 3rem;
+		width: 50%;
+		margin-left: 25%;
+	}
 
 }
