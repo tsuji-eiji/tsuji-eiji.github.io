@@ -118,8 +118,12 @@ img {
 }
 
 
-form p {
+p {
 	margin: 0;
+}
+
+h5 {
+	margin: 2rem 1rem;
 }
 
 label {
@@ -137,6 +141,18 @@ textarea {
 	height: 3rem;
 	width: 100%;
 	margin: 2rem auto;
+}
+
+#confirm {
+	margin: 4rem 0;
+}
+
+#confirm p {
+	margin-top: 1rem;
+}
+
+#error {
+	color: red;
 }
 
 /* レスポンシブ対応 */

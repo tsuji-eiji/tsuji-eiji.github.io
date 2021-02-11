@@ -13,6 +13,7 @@
 		gtag('js', new Date());
 
 		gtag('config', 'G-26YZJXWTQK');
+
 	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,6 +39,7 @@
 				font-size: 3.5rem;
 			}
 		}
+
 	</style>
 
 
@@ -59,16 +61,18 @@
 		</section>
 	</header>
 	<main>
+		<div id="error"></div>
 		<div class="form">
-			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse">
+			<!--			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse">-->
+			<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse" onSubmit="return confirm()">
 				<p><label for="name">お名前</label></p>
-				<p><input id="name" name="entry.2005620554" type="text"></p>
+				<p><input id="name" name="entry.2005620554" type="text" required></p>
 				<p><label for="email">メールアドレス</label></p>
-				<p><input type="email" name="entry.469344052" id="email"></p>
+				<p><input type="email" name="entry.469344052" id="email" required></p>
 				<p><label for="subject">件名</label></p>
-				<p><input type="text" name="entry.1166974658" id="subject"></p>
+				<p><input type="text" name="entry.1166974658" id="subject" required></p>
 				<p><label for="message">内容</label></p>
-				<p><textarea id="message" name="entry.839337160" cols="30" rows="10"></textarea></p>
+				<p><textarea id="message" name="entry.839337160" cols="30" rows="10" required></textarea></p>
 				<p><button id="submit">送信</button></p>
 			</form>
 		</div>
@@ -79,4 +83,6 @@
 			<p>(c) 2021 Tsuji Eiji All Rights Resarved.</p>
 		</div>
 	</footer>
-</body></html>
+</body>
+
+</html>
