@@ -56,24 +56,33 @@
 		<section class="title text-center">
 			<div id="title-text" class="mx-auto">
 				<h1 class="fw-light">Contact</h1>
-				<p class="lead">ご連絡・お問い合わせは以下のフォームよりお願いします。</p>
+				<p class="lead">
+					ご連絡・お問い合わせは以下のフォームよりお願いします。<br>
+					<small>※このフォームはGoogle Formを利用しています。</small>
+				</p>
+
 			</div>
 		</section>
 	</header>
 	<main>
 		<div id="error"></div>
 		<div class="form">
-<!--				<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse">-->
-			<form>
+			<form method="post" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfhjilkBxETk3oI4FkSlW9-f6dw2OzqrmgqZXspe5k4bJ8Bkg/formResponse" class="autoConfirm">
+				<!--			<form>-->
 				<p><label for="name">お名前</label></p>
-				<p><input id="name" name="entry.2005620554" type="text"></p>
+				<p><input id="name" name="entry.2005620554" type="text" required></p>
 				<p><label for="email">メールアドレス</label></p>
-				<p><input type="email" name="entry.469344052" id="email"></p>
+				<p><input type="email" name="entry.469344052" id="email" required></p>
 				<p><label for="subject">件名</label></p>
-				<p><input type="text" name="entry.1166974658" id="subject"></p>
+				<p><input type="text" name="entry.1166974658" id="subject" required></p>
 				<p><label for="message">内容</label></p>
-				<p><textarea id="message" name="entry.839337160" cols="30" rows="10"></textarea></p>
-				<p><button id="submit">送信</button></p>
+				<p><textarea id="message" name="entry.839337160" cols="30" rows="10" required></textarea></p>
+				<!--				<p>-->
+				<div class="btnline">
+					<input type="submit" value="送信" id="submit">
+					<input type="button" value="戻る" id="back" class="autoConfirmBack" style="display:none;">
+				</div>
+				<!--				</p>-->
 			</form>
 		</div>
 	</main>
@@ -82,21 +91,9 @@
 			<p>(c) 2021 Tsuji Eiji All Rights Resarved.</p>
 		</div>
 	</footer>
-	<script>
-		'use strict';
-		
-		
-		document.getElementById('submit').addEventListener('click',()=>{
-			
-			const name = document.getElementById('name').value;
-			const email = document.getElementById('email').value;
-			const subject = document.getElementById('subject').value;
-			const message = document.getElementById('message').value;
-			
-			window.alert('hhhh');
-			preventDefault();
-		})
-	</script>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ba-hashchange.min.js"></script>
+	<script type="text/javascript" src="js/autoConfirm.js"></script>
 </body>
 
 </html>

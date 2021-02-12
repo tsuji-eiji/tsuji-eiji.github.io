@@ -128,7 +128,7 @@ h5 {
 
 label {
 	margin: .5rem 0 0;
-/*	font-size: 1.2rem;*/
+	/*	font-size: 1.2rem;*/
 }
 
 input,
@@ -137,18 +137,15 @@ textarea {
 	resize: none;
 }
 
-#submit {
+#submit,
+#back {
 	height: 3rem;
 	width: 100%;
-	margin: 2rem auto;
+	margin-top: 2rem;
 }
 
-#confirm {
-	margin: 4rem 0;
-}
-
-#confirm p {
-	margin-top: 1rem;
+#back {
+	display: none;
 }
 
 #error {
@@ -163,11 +160,11 @@ textarea {
 	#page-title {
 		font-size: 1.8rem;
 	}
-	
+
 	h1 {
 		font-size: 2.8rem;
 	}
-	
+
 	.lead {
 		font-size: 1.6rem;
 	}
@@ -177,10 +174,15 @@ textarea {
 		margin: 2rem auto 2rem 4rem;
 	}
 
-	#submit {
+	#submit,
+	#back {
 		height: 3rem;
-		width: 50%;
-		margin-left: 25%;
+		width: 30%;
+		margin: 2rem;
+	}
+	
+	.btnline {
+		display: flex;
 	}
 
 }
