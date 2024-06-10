@@ -1,1 +1,0 @@
-# tsuji-eiji.github.io

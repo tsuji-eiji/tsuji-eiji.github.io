@@ -1,0 +1,80 @@
+@charset "utf-8";
+body {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.loading {
+  text-align: center;
+  min-height: 100vh;
+  align-content: center;
+}
+
+.prof-area {
+  color: #ccc;
+  margin: 5rem 2rem;
+}
+
+h2 {
+  color: #ccc;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+h2,
+p {
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo-area {
+  text-align: center;
+}
+
+.logo-area img {
+  object-fit: cover;
+  height: 200px;
+}
+
+.sc-area {
+  text-align: center;
+}
+
+.sc-area iframe {
+  margin: auto;
+}
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background: #333;
+}
+
+.footer-span {
+  display: block;
+  color: #ccc;
+  text-align: center;
+}
+
+.display-none {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 780px;
+    margin: auto;
+  }
+
+  .logo-area img {
+    width: auto;
+    height: 260px;
+  }
+
+  footer {
+    margin-top: 5rem;
+  }
+}
