@@ -2,7 +2,7 @@
 body {
   display: flex;
   flex-direction: column;
-  background: #000;
+  background: #555;
 }
 
 .loading {
