@@ -2,60 +2,99 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twenty-Four -ツジ エイジ公式サイト-</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26YZJXWTQK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ツジ エイジ Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-26YZJXWTQK');
-
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container">
-    <div class="logo-area">
-      <img src="./img/logo.png" alt="">
-    </div>
-    <div class="prof-area yusei-magic-regular">
-      <h2>Profile</h2>
-      <div class="icon-area">
-        <img src="./img/profile.png" alt="">
+  <header class="site-header">
+    <h1 class="logo">ツジ エイジ Portfolio</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h2>ツジ エイジ<br><span class="accent">Portfolio Site</span></h2>
       </div>
-      <div class="text-area">
-        <p>1990年4月24日生まれ。</p>
-        <p>中学生の頃よりギターとベースを弾き始める。</p>
-        <p>影響を受けた音楽はソウル・ファンク・モータウンなどの古い黒人音楽とハードロック・ヘビーメタル。</p>
-        <p>音楽以外の趣味はテレビゲームとプロレス観戦。</p>
-      </div>
-    </div>
-    <div class="sc-area">
-      <h2>Music</h2>
-      <iframe width="90%" height="450" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1834229706&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-    </div>
-  </div>
-  <footer>
-    <span class="footer-span"></span>
+    </section>
+
+    <section id="about" class="section fade-in">
+      <h2>About</h2>
+      <div class="profile">
+        <img src="image/profile.png" alt="プロフィール画像">
+        <div class="profile-details">
+          <h3>ツジ エイジ</h3>
+          <p>大阪市内在住のWebエンジニア。PHPを用いたバックエンド開発をメインに最近はNext.jsなどでも開発してます。趣味はプロレス観戦やギターなど</p>
+        </div>
+    </section>
+
+    <section id="works" class="section fade-in">
+      <h2>Works</h2>
+      <p>職業訓練時に作成した成果物や日常生活や職場で必要になり作成したツールたち</p>
+      <div id="works-grid" class="works-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 ツジ エイジ. All rights reserved.</p>
   </footer>
+
   <script>
-    const now = new Date();
-    const year = now.getFullYear();
-    document.getElementsByClassName('footer-span')[0].textContent = '(c) ' + year + ' Tsuji Eiji All Rights Resarved.';
-    console.log(document.getElementsByClassName('footer-span'));
+    // スクロールで fade-in アニメーション
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+    // works取得
+    fetch('works.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('ネットワークエラー: ' + response.status);
+        }
+        return response.json();
+      })
+      .then(data => {
+        for (const work of data) {
+          createWorkCard(work);
+        }
+      })
+      .catch(error => {
+        console.error('エラー:', error);
+      });
+
+    // 実績のカードを作成
+    function createWorkCard(work) {
+      const card = document.createElement("a");
+      card.className = "work-card";
+      card.href = work.url;
+      card.target = "_blank";
+
+      const image = document.createElement("div");
+      image.className = "work-image";
+
+      const img = document.createElement("img");
+      img.src = "/image/works/" + work.image;
+      img.alt = work.title;
+
+      const p = document.createElement("p");
+      p.textContent = work.title;
+
+      card.appendChild(img);
+      card.appendChild(p);
+
+      document.getElementById("works-grid").appendChild(card);
+    }
   </script>
 </body>
 
