@@ -28,5 +28,10 @@
         "title": "CamanJSを使用した画像編集ツール",
         "url": "https://tsuji-eiji.github.io/img-edit/",
         "image": "img_edit.png"
+    },
+    {
+        "title": "JavaScriptで作成したディレイタイム計算アプリ",
+        "url": "https://tsuji-eiji.github.io/delay-time/",
+        "image": "no_image.jpg"
     }
 ]
